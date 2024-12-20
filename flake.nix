@@ -66,8 +66,9 @@
           fetchSubmodules = true;
         };
 
+        nativeBuildInputs = [ pkgs.qt5.qmake ];
+
         buildInputs = with pkgs.qt5; [
-          qmake
           qtquickcontrols2
           wrapQtAppsHook
         ];
