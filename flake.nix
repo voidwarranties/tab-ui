@@ -71,6 +71,10 @@
           qtquickcontrols2
           wrapQtAppsHook
         ];
+
+        patches = [
+          ./patches/0001-main.qml-change-window-title-for-voidwarranties.patch
+        ];
       };
     });
   };
