@@ -1,0 +1,13 @@
+diff --git a/main.qml b/main.qml
+index dcb56a1..7fc4ee0 100644
+--- a/main.qml
++++ b/main.qml
+@@ -13,7 +13,7 @@ Window {
+     width: 640
+     height: 480
+     visibility: Window.Maximized
+-    title: qsTr("Hackerspace.gent tab-ui")
++    title: qsTr("VoidWarranties Barputer UI")
+     color: "black"
+ 
+     property int fontSize: 16
