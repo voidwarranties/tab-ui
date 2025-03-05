@@ -1,0 +1,25 @@
+diff --git a/ProductList.qml b/ProductList.qml
+index bb5e3fd..dd5aaea 100644
+--- a/ProductList.qml
++++ b/ProductList.qml
+@@ -50,7 +50,7 @@ Rectangle {
+             y: _row * _cell_height + 10
+             // This is a bit weird; we need to reference the data generation so that it 
+             // updates when the model does
+-            text: productModel.get((productModel.dataGeneration, _itemIdx))["name"]
++            text: productModel.get((productModel.dataGeneration, _itemIdx))["name"] + qsTr("\n€ ") + productModel.get((productModel.dataGeneration, _itemIdx))["price"]
+             bgColor: {
+                 switch(category) {
+                 case "food": return "#cc6600"
+diff --git a/main.qml b/main.qml
+index dcb56a1..a05cf3b 100644
+--- a/main.qml
++++ b/main.qml
+@@ -184,6 +184,7 @@ Window {
+                        cost: Math.round((product.price - 0) * 100),
+                        category: product.category,
+                        sort_key: product.sort_key,
++                       price: product.price,
+                 })
+             }
+             items.sort(function (a,b) { return a.sort_key.localeCompare(b.sort_key)});
