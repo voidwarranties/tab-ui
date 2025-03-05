@@ -64,7 +64,7 @@
         src = pkgs.fetchgit {
           url = "https://github.com/0x20/tab-ui.git";
           rev = "ef92b6c9dcd62a7430d4bc4a0b9028b76047d99c";
-          hash = "sha256-uQ/BIEYArVs0KIwfDNQbqxrTSbwZ6NIgW4KMwz7xSHk=";
+          hash = "sha256-wLngz0ehW/6vrdB1v9fd9XjgvU1mGg3xBYnkbaz+C4w=";
           fetchSubmodules = true;
         };
 
