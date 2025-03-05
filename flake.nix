@@ -56,12 +56,17 @@
 
     packages = forAllSystems (pkgs: {
       default = self.packages.${pkgs.system}.tab-ui;
-      tab-ui = pkgs.stdenv.mkDerivation {
+      tab-ui = pkgs.stdenv.mkDerivation rec {
         pname = "tab-ui";
 
-        version = "1.0";
+        version = builtins.substring 0 7 src.rev;
 
-        src = ./.;
+        src = pkgs.fetchgit {
+          url = "https://github.com/0x20/tab-ui.git";
+          rev = "ef92b6c9dcd62a7430d4bc4a0b9028b76047d99c";
+          hash = "sha256-uQ/BIEYArVs0KIwfDNQbqxrTSbwZ6NIgW4KMwz7xSHk=";
+          fetchSubmodules = true;
+        };
 
         nativeBuildInputs = with pkgs; [
           qt5.qmake
