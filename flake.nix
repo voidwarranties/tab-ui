@@ -80,6 +80,7 @@
         patches = [
           ./patches/0001-main.qml-change-window-title-for-voidwarranties.patch
           ./patches/0002-show-product-prices.patch
+          ./patches/0003-format-logview.patch
         ];
       };
     });
