@@ -1,0 +1,36 @@
+diff --git a/TallyView.qml b/TallyView.qml
+index cb616e0..a7e9f18 100644
+--- a/TallyView.qml
++++ b/TallyView.qml
+@@ -31,10 +31,10 @@ Rectangle {
+                 Text {
+                     id: qtyLabel
+                     color: "white"
+-                    width: 50
++                    width: 75
+                     horizontalAlignment: Text.AlignRight
+                     text: (count > 1) ? (count + "x ") : ""
+-                    font.pixelSize: application.fontSize
++                    font.pixelSize: application.fontSize * 1.5
+                     font.family: application.fontFace
+                 }
+ 
+@@ -42,15 +42,15 @@ Rectangle {
+                     width: parent.width - qtyLabel.width - costLabel.width
+                     color: "white"
+                     text: name
+-                    font.pixelSize: application.fontSize
++                    font.pixelSize: application.fontSize * 1.5
+                     font.family: application.fontFace
+                 }
+                 Text {
+                     id: costLabel
+                     color: "white"
+-                    width: 100
++                    width: 150
+                     horizontalAlignment: Text.AlignRight
+-                    font.pixelSize: application.fontSize
++                    font.pixelSize: application.fontSize * 1.5
+                     font.family: application.fontFace
+                     text: {
+                         application.formatCurrency(cost * count)
