@@ -55,7 +55,7 @@
     formatter = forAllSystems (pkgs: pkgs.alejandra);
 
     packages = forAllSystems (pkgs: {
-      default = self.packages.${pkgs.system}.tab-ui;
+      default = self.packages.${pkgs.stdenv.hostPlatform.system}.tab-ui;
       tab-ui = pkgs.stdenv.mkDerivation rec {
         pname = "tab-ui";
 
@@ -106,7 +106,7 @@
     });
 
     overlays.default = final: prev: {
-      inherit (self.packages.${prev.system}) tab-ui;
+      inherit (self.packages.${prev.stdenv.hostPlatform.system}) tab-ui;
     };
   };
 }
