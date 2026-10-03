@@ -1,0 +1,24 @@
+diff --git a/TallyView.qml b/TallyView.qml
+index cb616e0..9d5b4e9 100644
+--- a/TallyView.qml
++++ b/TallyView.qml
+@@ -87,7 +87,7 @@ Rectangle {
+ 
+         Text {
+             color: "white"
+-            font.pixelSize: application.fontSize
++            font.pixelSize: application.fontSize * 1.5
+             font.family: application.fontFace
+             text: "   Total: "
+             width: parent.width - totalLabel.width
+@@ -97,8 +97,8 @@ Rectangle {
+             id: totalLabel
+             color: "white"
+ 
+-            width: 120
+-            font.pixelSize: application.fontSize
++            width: 180
++            font.pixelSize: application.fontSize * 1.5
+             font.family: application.fontFace
+             horizontalAlignment: Text.AlignRight
+ 
