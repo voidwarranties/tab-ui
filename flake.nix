@@ -82,6 +82,12 @@
           ./patches/0002-show-product-prices.patch
           ./patches/0003-format-logview.patch
           ./patches/0004-larger-tally-item-text.patch
+          ./patches/0005-larger-tally-total-text.patch
+          ./patches/0006-tally-dark-grey-background.patch
+          ./patches/0007-log-grey-background.patch
+          ./patches/0008-round-button-corners.patch
+          ./patches/0009-equal-gutter-between-button-groups.patch
+          ./patches/0010-align-log-box-with-buttons.patch
         ];
       };
     });

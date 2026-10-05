@@ -1,0 +1,16 @@
+--- a/main.qml
++++ b/main.qml
+@@ -19,8 +19,11 @@
+     property int fontSize: 16
+     property string fontFace: "Roboto"
+ 
+-    property int buttonWidth: 123
+-    property int buttonHeight: (Math.sqrt(5) - 1) / 2 * buttonWidth
++    // 132 makes the four left columns and three right columns leave a 30px
++    // gutter between them, matching the 30px gap between the top and bottom rows
++    property int buttonWidth: 132
++    // 77 is the tallest that still fits five rows in the 439px grid below
++    property int buttonHeight: 77
+ 
+     property string backend_url: Qt.application.arguments[1] || "http://localhost:4903"
+     property bool layoutDebug: false

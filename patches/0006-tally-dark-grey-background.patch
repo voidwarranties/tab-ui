@@ -1,0 +1,67 @@
+--- a/TallyView.qml
++++ b/TallyView.qml
+@@ -9,12 +9,29 @@
+ 
+     property bool hasSelection: tallyList.currentIndex !== -1
+ 
+-    ListView {
++    // Dark grey panel behind the item list. Its left edge lines up with the
++    // button row below it.
++    Rectangle {
++        id: itemsPanel
+         anchors {
+             top: parent.top
+             right: parent.right
+             left: parent.left
+-            bottom: totalRow.top
++            bottom: totalPanel.top
++            leftMargin: 10
++            bottomMargin: 10
++        }
++        color: "#2a2a2a"
++        radius: 8
++    }
++
++    ListView {
++        anchors {
++            top: itemsPanel.top
++            right: itemsPanel.right
++            left: itemsPanel.left
++            bottom: itemsPanel.bottom
++            margins: 10
+         }
+ 
+ 
+@@ -77,12 +94,30 @@
+ 
+ 
+     }
+-    Row {
+-        id: totalRow
++    // The total sits in its own panel, split off from the items above it
++    Rectangle {
++        id: totalPanel
+         anchors {
+             right: parent.right
+             left: parent.left
+             bottom: controls.top
++            leftMargin: 10
++            bottomMargin: 10
++        }
++        height: totalRow.height + 20
++        color: "#2a2a2a"
++        radius: 8
++    }
++
++    Row {
++        id: totalRow
++        anchors {
++            right: totalPanel.right
++            left: totalPanel.left
++            top: totalPanel.top
++            leftMargin: 10
++            rightMargin: 10
++            topMargin: 10
+         }
+ 
+         Text {

@@ -1,0 +1,10 @@
+--- a/controls/TqButton.qml
++++ b/controls/TqButton.qml
+@@ -23,6 +23,7 @@
+     background: Rectangle {
+         implicitHeight: application.buttonHeight
+         implicitWidth: application.buttonWidth
++        radius: 8
+         color: {
+             if (Colors.hasOwnProperty(bgColor)) {
+                 Colors[bgColor][control.down ? downShade : shade]

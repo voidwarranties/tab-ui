@@ -7,7 +7,7 @@ index 4244e22..aa74e9a 100644
  
              text: {
 -                var ts_string = "<" + timestamp.toLocaleString(Qt.locale(), "--MM-dd HH:mm") + "> ";
-+                var ts_string = "[" + timestamp.toLocaleString(Qt.locale(), "MM-dd HH:mm") + "] ";
++                var ts_string = "[" + timestamp.toLocaleString(Qt.locale(), "dd-MM HH:mm") + "] ";
                  var suffix = "";
  
                  switch (status) {

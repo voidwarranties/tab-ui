@@ -1,0 +1,12 @@
+--- a/MainView.qml
++++ b/MainView.qml
+@@ -39,6 +39,9 @@
+             leftMargin: 10
+             topMargin: 10
+             bottomMargin: 0
++            // 20 lands the right edge on 568, where the button row and the
++            // product grid below both end
++            rightMargin: 20
+         }
+ 
+     }
